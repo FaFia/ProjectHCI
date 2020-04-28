@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<title>BIS'S Book Mainpage</title>
+<link rel="icon" href="photos/icon.jpg" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato","Raleway", sans-serif ;}
+a { text-decoration: none; }
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-repeat: no-repeat;
+  /*ถ้าจะกำหนดpadding   padding: 5px 20px 5px 20px;   */
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 90%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* กำหนดรูปแบบของแถว */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* สร้าง columns ที่เท่ากันสี่ columns ที่จะอยู่ถัดกันไป */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+
+/* สร้างสอง columns/boxes ที่จะ floats ต่อจากอีกอัน */
+nav {
+  float: left;
+  width: 30%;
+  height: auto; /* only for demonstration, should be removed */
+  background: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+/* กำหนด list ใน menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: right;
+  padding: 20px;
+  width: 70%;
+  background-color: rgb(244, 67, 54);
+  height: auto; 
+}
+
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div.gallery {
+  margin: 5px;
+  border: none;
+  float: left;
+  max-width: 180px;
+}
+
+div.gallery:hover {
+  opacity: 0.5;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: auto;
+  text-align: center;
+}
+
+/* Responsive layout - ทำให้ column ไม่ซ้อนกัน */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  
+}
+/* Responsive layout - ทำให้ column-layout ออกมาเป็น 2 แทน 4 columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+</style>
+
+
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">  <!-- กำหนด body สี ขนาด -->
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-red w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br> <!-- กำหนดรูปแบบการสร้าง Sidebar/menu กำหนดสี ทิศทางการแสดง  -->
+    <div class="w3-container"> <!-- สร้าง container สำหรับใส่ค่าต่างๆใน Sidebar/menu -->
+      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu"> <!-- สร้าง ปุ่มปิด Sidebar/menu -->
+        <i class="fa fa-remove"></i> <!-- รูป ปุ่มปิด Sidebar/menu -->
+      </a>
+      <img src="photos\LOGO.png" style="width:45%;" class="w3-round"><br><br> <!-- กำหนดรูปแบบรูปโลโก้ -->
+    </div>
+    <div class="w3-bar-block"> <!-- block แถบค่าใน slide -->
+      <a href="#ชื่อ" class="w3-bar-item w3-button w3-right w3-hover-red"> <!-- input search bar -->
+        <input type="text" name="search" placeholder="Search..">
+      <i class="fa fa-search"></i> <!-- รูป search bar -->
+      </a>
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-black"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a> <!-- ปุ่ม/รูป HOME -->
+      <a href="catalog1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw w3-margin-right"></i>BOOKS</a> <!-- ปุ่ม/รูป BOOKS -->
+      <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> <!-- ปุ่ม/รูป ABOUT -->
+      <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a> <!-- ปุ่ม/รูป CONTACT -->
+      <a href="cart.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-shopping-cart fa-fw w3-margin-right"></i>CART</a> <!-- ปุ่ม/รูป CART -->
+    </div>
+    <div class="w3-panel w3-large"> <!-- ส่วนไอคอน ช่องทาง Media -->
+      <i class="fa fa-facebook-official w3-hover-opacity"></i> <!-- ไอคอน facebook -->
+      <i class="fa fa-instagram w3-hover-opacity"></i> <!-- ไอคอน instagram -->
+      <i class="fa fa-snapchat w3-hover-opacity"></i> <!-- ไอคอน snapchat -->
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i> <!-- ไอคอน pinterest -->
+      <i class="fa fa-twitter w3-hover-opacity"></i> <!-- ไอคอน twitter -->
+      <i class="fa fa-linkedin w3-hover-opacity"></i> <!-- ไอคอน linkedin -->
+    </div>
+  </nav>
+  
+  <!-- Overlay effect เมื่อเปิด sidebar ในจอขนาดเล็ก -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+  <!-- ส่วนเนื้อหา -->
+  <div class="w3-main" style="margin-left:300px">
+  
+    <!-- Header -->
+    <header id="portfolio">
+      <a href="#"><img src="photos\LOGO.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> <!--รูปโลโก้ใน header กำหนดเป็นวงกลม -->
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span> <!--กำหนดรูปแบบปุ่ม/ hover-->
+      <div class="w3-container"> <!--container ส่วน filter -->
+      <div class="w3-section w3-bottombar w3-padding-16"> <!--เส้นขีดล่าง -->
+        <span class="w3-margin-right">Filter:</span> <!--ชื่อ filter -->
+        <button class="w3-button w3-red">ALL</button> <!--ปุ่ม All-->
+        <button class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>Novel</button> <!--ปุ่ม Novel -->
+        <button class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>Education</button> <!--ปุ่ม Education -->
+        <button class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>Literature</button> <!--ปุ่ม Literature -->
+      </div>
+      </div>
+    </header>
+
+<!-- เนื้อหา /ความกว้างสุงสุด -->
+<div class="w3-content" style="max-width:1100px;">
+
+  <div class="container" style="max-height: 500px; max-width: 1000px;"> <!-- กำหนดความกว้างสุงสุด -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- สร้าง carousel slide -->
+      <!-- Indicators -->
+      <ol class="carousel-indicators"> <!-- กำหนดว่ามีกี่ slide -->
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner"> <!-- ส่วนในของ slide -->
+        <div class="item active"> <!-- กำหนดให้ "item" เลื่อน -->
+          <img src="photos\slide 7.png" alt="Los Angeles" style="width:100%;">
+        </div>
+  
+        <div class="item"> <!-- กำหนด "item" -->
+          <img src="photos\slide 8.png" alt="Chicago" style="width:100%;">
+        </div>
+      
+        <div class="item"> <!-- กำหนด "item" -->
+          <img src="photos\slide 9.png" alt="New york" style="width:100%;">
+        </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <!-- กำหนดปุ่มซ้าย(กลับ) -->
+        <span class="glyphicon glyphicon-chevron-left"></span> <!-- กำหนด รูป ปุ่มซ้าย(กลับ) -->
+        <span class="sr-only">Previous</span> <!-- กำหนด ชื่อ ปุ่มซ้าย(กลับ) -->
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"> <!-- กำหนดปุ่มขวา(ต่อไป) -->
+        <span class="glyphicon glyphicon-chevron-right"></span> <!-- กำหนด รูป ปุ่มขวา(ต่อไป) -->
+        <span class="sr-only">Next</span> <!-- กำหนด ชื่อ ปุ่มขวา(ต่อไป) -->
+      </a>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px"> <!-- กำหนด ขนาด container-->
+  
+    <section> <!-- กำหนด section-->
+      <nav>
+        <h4>สินค้าขายดี</h4>
+
+
+        <div class="gallery"> <!-- เรียกใช่ gallery-->
+        <div class="w3-display-container"> <!-- เรียกใช่ display-container-->
+          <a target="_blank" href="VIGILANTEMYHEROACADEMIAILLEGALS.html">
+            <img src="photos\VIGILANTEMYHEROACADEMIAILLEGALS.jpg" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="w3-display-topleft w3-container" style="background-color: black; color: cornsilk;">NEW !!</div> <!-- แทรก ป้ายส่งเสริมการขาย-->
+          <div class="desc"><h6>#1 VIGILANTE MY HERO ACADEMIA ILLEGALS</h6></div>
+          </div>
+        </div>
+
+
+        <div class="gallery"> <!-- เรียกใช่ gallery-->
+          <div class="w3-display-container"> <!-- เรียกใช่ display-container-->
+          <a target="_blank" href="WHO IS WHO IN THE RUSSIAN REVOLUTION2.html">
+            <img src="photos\WHO IS WHO IN THE RUSSIAN REVOLUTION.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="w3-display-topleft w3-container" style="background-color: black; color: cornsilk;">SALE !!</div> <!-- แทรก ป้ายส่งเสริมการขาย-->
+          <div class="desc"><h6>#2 WHO IS WHO IN THE RUSSIAN REVOLUTION</h6></div> <!-- กำหนดชื่อ ใน desc-->
+          </div>
+       </div>
+
+        
+        <div class="gallery"> <!-- เรียกใช่ gallery-->
+          <a target="_blank" href="ขอต้อนรับสู่ห้องเรียนนิยม.html">
+            <img src="photos\ขอต้อนรับสู่ห้องเรียนนิยม.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+          <div class="desc"><h6>#3 ขอต้อนรับสู่ห้องเรียนนิยม</h6></div> <!-- กำหนดชื่อ ใน desc-->
+        </div>
+        
+        <div class="gallery"> <!-- เรียกใช่ gallery-->
+          <a target="_blank" href="หลังบ้านyoutube.html">
+            <img src="photos\หลังบ้านyoutube.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc"><h6>#4 หลังบ้านyoutube</h6></div> <!-- กำหนดชื่อ ใน desc-->
+        </div>
+
+        <div class="gallery"> <!-- เรียกใช่ gallery-->
+          <a target="_blank" href="สามก๊ก.html">
+            <img src="photos\สามก๊ก.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc"><h6>#5 สามก๊ก</h6></div> <!-- กำหนดชื่อ ใน desc-->
+        </div>
+        
+      </nav>
+       
+      <article> <!-- ใช่ประโยชน์จากการแบ่งส่วนของ article-->
+ 
+        <h1>นิตยสาร Kikan S ฉบับที่ 69 จะมีบทสัมภาษณ์กับเบื้องหลังการเขียน SPY x FAMILY</h1>
+        <div class="gallery" style="height: auto; max-width: 700px;"> <!-- เรียกใช่ gallery กำหนดขนาด-->
+          <img src="photos\longspyxfamily.jpg" alt="spyxfamily">
+        </div>
+        <p>นิตยสาร Kikan S ฉบับที่ 69 ที่เพิ่งวางจำหน่ายไปเมื่อวันที่ 14 มีนาคม 2020 (Fukkan Dotcom) ได้มีการตีพิมพ์สัมภาษณ์อาจารย์ Endou Tatsuya ผู้เขียน SPY x FAMILY มังงะยอดฮิตของ Shonen Jump ถึงเบื้องหลังในการทำงานให้แฟน ๆ ได้อ่านกันแล้ว</p>
+        <h3 style="color: blue;">Kikan S Vol.69</h3>
+        <div class="gallery" style="height: auto; max-width: auto;"> <!-- เรียกใช่ gallery กำหนดขนาด-->
+          <img src="photos\kikan.jpg" alt="kikan"> 
+        </div>
+        <p>โดยบทสัมภาษณ์กับอาจารย์ Endou ในครั้งนี้ นอกจากจะพูดถึงตัวละคร มุมมองของโลกและเนื้อเรื่องแต่ละตอนแล้ว ยังมีการเผยถึงเบื้องหลังกับขั้นตอนการทำงานตั้งแต่การเขียนพล็อต เนม ดราฟต์ ตัดเส้นและลงหมึกจนถึงการตีพิมพ์ รวมถึงบรรยากาศห้องทำงานของอาจารย์ Endou ทั้งหมดด้วย ถ้าหากใครช่ำชองภาษาญี่ปุ่นก็ลองหามาอ่านกันดูนะ!</p>
+          
+        <p>ส่วนเนื้อหาอื่น ๆ ภายในเล่มนั้นจะมีการตีพิมพ์บทสัมภาษณ์ของอาจารย์ Sakamoto ผู้เขียน Inosan Rouge กับอาจารย์ Sano Nami ผู้เขียน Migi to Dari และมีการแจกแฟ้มใสขนาด A ลายเดียวกับหน้าปกฉบับนี้ที่ออกแบบโดย Kuroboshi Kouhaku</p>
+        <h3>นิตยสาร Kikan S ฉบับที่ 69 จะมีบทสัมภาษณ์กับเบื้องหลังการเขียน SPY x FAMILY</h3>
+        
+      </article>
+
+      <article style="text-align: center; color: whitesmoke; background-color:rgb(52, 53, 52)" > <!-- ใช่ประโยชน์จากการแบ่งส่วนของ article กำหนดรูปแบบ-->
+        <h1>WE ARE ON SALE!!</h1>
+
+        <br /> 
+        <div class="w3-content" style="max-width:1100px;"> <!-- ทำที่ใส่อีก slide-->
+
+
+          <div class="container" style="max-height: 250px; max-width: 500px;"> <!-- กำหนดความกว้างสุงสุด -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- สร้าง carousel slide -->
+              <!-- Indicators --> 
+              <ol class="carousel-indicators">  <!-- กำหนดว่ามีกี่ slide -->
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+          
+              <!-- Wrapper for slides -->
+              
+              <div class="carousel-inner"> <!-- ส่วนในของ slide -->
+                <div class="item active"> <!-- กำหนดให้ "item" เลื่อน -->
+                  <img src="photos\slide 4.png" alt="Los Angeles" style="width:100%;">
+                </div>
+          
+                <div class="item"> <!-- กำหนด "item" -->
+                  <img src="photos\slide 5.png" alt="Chicago" style="width:100%;">
+                </div>
+              
+                <div class="item"> <!-- กำหนด "item" -->
+                  <img src="photos\slide 6.png" alt="New york" style="width:100%;">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          
+     
+      </article>
+
+
+      <article style="text-align: center; color: whitesmoke; background-color:rgb(244, 67, 54)" > <!-- ใช่ประโยชน์จากการแบ่งส่วนของ article กำหนดรูปแบบ-->
+        <h1>ช่องทางชำระ</h1>
+
+        <br /> 
+
+          <div class="row">  <!-- กำหนดแถว -->
+            
+            <div class="column"> <!-- กำหนดcolumn -->
+              <a target="_blank" href="#ชื่อ">
+                <img src="photos\kbank.png" alt="K Bank" style="max-height: 200px; max-width: 200px;">
+              </a>
+              <h6>1672-369-95485</h6>         
+            </div>
+
+            <div class="column"> <!-- กำหนดcolumn -->
+              <a target="_blank" href="#ชื่อ">
+                <img src="photos\promtpay.jpg" alt="Promptpay" style="max-height: 200px; max-width: 200px;">
+              </a>
+              <h6>081-111222333</h6>
+            </div>  
+
+            <div class="column"> <!-- กำหนดcolumn -->
+              <a target="_blank" href="#ชื่อ">
+                <img src="photos\line.png" alt="Line" style="max-height: 200px; max-width: 200px;">
+              </a>
+              <h6>@BIS'BOOK</h6>
+            </div>
+
+            <div class="column"> <!-- กำหนดcolumn -->
+              <a target="_blank" href="#ชื่อ">
+                <img src="photos\paypal-3384015_960_720.png" alt="paypal" style="max-height: 200px; max-width: 200px;">
+              </a>
+              <h6>BIS's Book</h6>
+            </div>
+
+          </div>
+
+      </article>
+
+    </section>
+
+  
+
+<div class="w3-container w3-padding-large" style="margin-bottom:32px"> <!-- กำหนดความกว้างในอีก div -->
+    
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey"> <!-- สร้าง container กำหนดสี -->
+  <div class="w3-row-padding"> <!-- เลือนแถว -->
+    <div class="w3-third"> <!-- ทำให้มี 3 ส่วน -->
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  
+    <div class="w3-third"> <!-- ทำให้มี 3 ส่วน -->
+      <h3>Created By</h3>
+      <ul class="w3-ul w3-hoverable"> <!-- มี hover -->
+        <a href="https://www.facebook.com/fiaroro.tot">
+        <li class="w3-padding-16"> <!-- สร้าง list -->
+          <img src="https://scontent.fhdy3-1.fna.fbcdn.net/v/t1.0-9/39072674_1869957039752658_5851776345322815488_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_eui2=AeGA1jZjjNMaK7dYYVs37Mij-OB7lCvi6qf44HuUK-Lqp_PQY9eB6Sg4yTVeZX415vAQpaim98VW_hMXmj0C-WFg&_nc_ohc=qKU8itrSPWoAX-gvbks&_nc_ht=scontent.fhdy3-1.fna&oh=64cb745955750a80453ebef52ae2b0db&oe=5EC672AD" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Fia</span><br> <!-- span ชื่อ -->
+          <span>BIS Student</span>
+        </li>
+        </a>
+        <a href="https://www.facebook.com/mok.srisarakam">
+        <li class="w3-padding-16"> <!-- สร้าง list -->
+          <img src="https://scontent.fhdy3-1.fna.fbcdn.net/v/t1.0-9/p960x960/82281980_2701796469866086_818679715043737600_o.jpg?_nc_cat=102&_nc_sid=7aed08&_nc_eui2=AeE7wj00s04K-wrJpMulyHmCwE5hetwIJWHATmF63AglYdXoqRfkE4hEdNeEaZ-xZYIEBkjp6UY9WKFwZpuWizdF&_nc_ohc=pEMZ7BQpY3sAX-ih7XM&_nc_ht=scontent.fhdy3-1.fna&_nc_tp=6&oh=0f910f230d4e35745e46288b3c756d9e&oe=5EC5E7F9" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Mok</span><br> <!-- span ชื่อ -->
+          <span>BIS Student</span>
+        </li>
+        </a> 
+      </ul>
+    </div>
+
+    <div class="w3-third"> <!-- ทำให้มี 3 ส่วน -->
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Books</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Biography</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Magazine</span> <!-- กำหนด span สร้างเป็นปุ่มแท็ก -->
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Writing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Author</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Newspaper</span> <!-- กำหนด span สร้างเป็นปุ่มแท็ก -->
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Manga</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Fiction</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Cook book</span> <!-- กำหนด span สร้างเป็นปุ่มแท็ก -->
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Short story</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Publisher</span> <!-- กำหนด span สร้างเป็นปุ่มแท็ก -->
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Novel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span> <!-- กำหนด span สร้างเป็นปุ่มแท็ก -->
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> <!-- div ส่วน credit w3school -->
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script เปิดปิด sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

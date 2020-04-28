@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <link rel="icon" href="photos/icon.jpg" type="image/png">
+<title>VIGILANTE MY HERO ACADEMIA ILLEGALS เล่ม 6</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato","Raleway", sans-serif;}
+a { text-decoration: none; }
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-repeat: no-repeat;
+  /*ถ้าจะกำหนดpadding   padding: 5px 20px 5px 20px;   */
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 90%;
+}
+
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px"> <!-- กำหนด body สี ขนาด -->
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-red w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br> <!-- กำหนดรูปแบบการสร้าง Sidebar/menu กำหนดสี ทิศทางการแสดง  -->
+    <div class="w3-container">
+      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu"> <!-- สร้าง ปุ่มปิด Sidebar/menu -->
+        <i class="fa fa-remove"></i> <!-- รูป ปุ่มปิด Sidebar/menu -->
+      </a>
+      <img src="photos\icon.jpg" style="width:45%;" class="w3-round"><br><br><!-- กำหนดรูปแบบรูปโลโก้ -->
+    </div>
+    <div class="w3-bar-block"> <!-- block แถบค่าใน slide -->
+      <a href="#ชื่อ" class="w3-bar-item w3-button w3-right w3-hover-red"> <!-- input search bar -->
+        <input type="text" name="search" placeholder="Search..">
+      <i class="fa fa-search"></i> <!-- รูป search bar -->
+      </a>
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a> <!-- ปุ่ม/รูป HOME -->
+    <a href="catalog1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-black"><i class="fa fa-book fa-fw w3-margin-right"></i>BOOKS</a> <!-- ปุ่ม/รูป BOOKS -->
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> <!-- ปุ่ม/รูป ABOUT -->
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a> <!-- ปุ่ม/รูป CONTACT -->
+    <a href="cart.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-shopping-cart fa-fw w3-margin-right"></i>CART</a> <!-- ปุ่ม/รูป CART -->
+    </div>
+    <div class="w3-panel w3-large"> <!-- ส่วนไอคอน ช่องทาง Media -->
+      <i class="fa fa-facebook-official w3-hover-opacity"></i> <!-- ไอคอน facebook -->
+      <i class="fa fa-instagram w3-hover-opacity"></i> <!-- ไอคอน instagram -->
+      <i class="fa fa-snapchat w3-hover-opacity"></i> <!-- ไอคอน snapchat -->
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i> <!-- ไอคอน pinterest -->
+      <i class="fa fa-twitter w3-hover-opacity"></i> <!-- ไอคอน twitter -->
+      <i class="fa fa-linkedin w3-hover-opacity"></i> <!-- ไอคอน linkedin -->
+    </div>
+  </nav>
+  
+  <!-- Overlay effect เมื่อเปิด sidebar ในจอขนาดเล็ก -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+  <!-- ส่วนเนื้อหา -->
+  <div class="w3-main" style="margin-left:300px">
+  
+    <!-- Header -->
+    <header id="portfolio">
+      <a href="#"><img src="photos\icon.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> <!--รูปโลโก้ใน header กำหนดเป็นวงกลม -->
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span> <!--กำหนดรูปแบบปุ่ม/ hover-->
+      <div class="w3-container"> <!--container ส่วน filter -->
+      <div class="w3-section w3-bottombar w3-padding-16"> <!--เส้นขีดล่าง -->
+        <span class="w3-margin-right">Filter:</span>  <!--ชื่อ filter -->
+        <button class="w3-button w3-red">ALL</button> <!--ปุ่ม All-->
+        <button class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>Novel</button> <!--ปุ่ม Novel -->
+        <button class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>Education</button> <!--ปุ่ม Education -->
+        <button class="w3-button w3-white"><i class="fa fa-book w3-margin-right"></i>Literature</button> <!--ปุ่ม Literature -->
+      </div>
+      </div>
+    </header>
+
+<!-- เนื้อหา /ความกว้างสุงสุด -->
+<div class="w3-content" style="max-width:1100px;">
+
+  <div class="w3-panel"> <!-- แผงสำหรับใส่ชื่อและแบ่งสวน -->
+    <h1><b>VIGILANTE MY HERO ACADEMIA ILLEGALS เล่ม 6</b></h1>
+    <!-- กำหนดแต้มดาว -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .checked {
+    color: orange;
+  }
+  </style>
+  </head>
+  <span class="fa fa-star checked"></span> <!-- รูปคะแนนดาวที่ได้คะแนน -->
+  <span class="fa fa-star checked"></span> <!-- รูปคะแนนดาวที่ได้คะแนน -->
+  <span class="fa fa-star checked"></span> <!-- รูปคะแนนดาวที่ได้คะแนน -->
+  <span class="fa fa-star checked"></span> <!-- รูปคะแนนดาวที่ได้คะแนน -->
+  <span class="fa fa-star"></span> <!-- รูปคะแนนดาวที่ไม่ได้คะแนน -->
+    <p>ผู้เขียน : Hideyuki Furuhashi (GoRA)</p>
+    <p>สำนักพิมพ์ : Siam Inter Comics </p>
+    <p>หมวดหมู่ : การ์ตูน การ์ตูนญี่ปุ่น มังงะ การ์ตูนไทย</p>
+  </div><!DOCTYPE html>
+  
+  <head>
+  
+        <!-- ส่วนเนื้อหาหนังสือ -->
+<div class="w3-panel w3-text-grey"> <!-- กำหนด div และสี text -->
+  <h4>เราจะเรียกพวกเขาว่าฮีโร่ได้อย่างนั้นหรือ? เรื่องราวนี้คือเรื่องราว ฉากหลัง ที่ติดตามดูพวกเขาซึ่งถูกเรียกว่า วิจิลันเต</h4>
+  </div>
+  <div class="w3-row"> <!-- กำหนดแถว -->
+  <div class="w3-half w3-container"> <!-- container ใส่รูป แบบแบ่งครึ่งหน้า -->
+    <img src="photos\VIGILANTEMYHEROACADEMIAILLEGALS.jpg" style="width:80%">
+  </div>
+  <div class="w3-half w3-container"> <!-- container ใส่รูป แบบแบ่งครึ่งหน้า -->
+    <img src="photos\VIGILANTEMYHEROACADEMIAILLEGALS2.jpg" style="width:80%">
+    <p class="w3-xlarge w3-text-grey"> <!-- ย่อหน้าใส่รายละเอียด -->
+      ราคา 57.00 บาท</p>
+      <p>สั่งซื้อสินค้า:</p>
+<button style="font-size:24px">ซื้อสินค้า</i></button>
+    </div>
+  </div>
+  <div class="w3-panel"><h1>VIGILANTE MY HERO ACADEMIA ILLEGALS เล่ม 6</h1>
+        <h3>รายละเอียด</h3>
+        <h5 class="w3-padding-32">ถามหาความถูกต้อง "Plus Ultar" ภาคพิเศษของการ์ตูนยอดฮิต "My Hero Academia" "ฮีโร่" เหล่าผู้ถูกเลือกที่ทำงานอุทิศตนเพื่อสังคมด้วย "อัตลักษณ์" ที่มีติดตัวมาแต่เกิดภายใต้การรับรองจากรัฐบาล ทว่าในโลกนี้ก็ยังมีเหล่า "ฮีโร่นอกกฎหมาย" ที่เคลื่อนไหวตามความตั้งใจของตนเองอยู่ด้วยเช่นกัน ความถูกต้องของพวกเขาเหล่านั้นคืออะไรกันแน่? และเราจะเรียกพวกเขาว่าฮีโร่ได้อย่างนั้นหรือ? เรื่องราวนี้คือเรื่องราว "ฉากหลัง" ที่ติดตามดูพวกเขาซึ่งถูกเรียกว่า "วิจิลันเต"
+
+        </h5>
+  
+        <h6> 
+          <div class="w3-panel w3-text-grey">
+          <p>เนื้อหาปกหลัง</p>
+            
+            <p>หลายเดือนหลังจากที่อาจารย์หายตัวไป วิลเลินที่ปรากฏตัวขึ้นที่เมืองนารุฮาตะก็เหมือนจะแข็งแกร่งขึ้นทุกทีๆ ฉันที่ไม่มั่นใจในเรี่ยวแรงตัวเองจนต้องใช้วิธีนั้นวิธีนี้ แก้ปัญหาเฉพาะหน้ามาตลอด แต่แล้ววันหนึ่งก็ดันไปโดนฮีโร่มือโปร "อิเรเซอร์เฮด" เจอตัวเข้า...!?</p>
+
+  </div>
+  
+
+      <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey"> <!-- สร้าง container กำหนดสี -->
+    <div class="w3-row-padding"> <!-- เลือนแถว -->
+      <div class="w3-third"> <!-- ทำให้มี 3 ส่วน -->
+        <h3>FOOTER</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      </div>
+    
+      <div class="w3-third"> <!-- ทำให้มี 3 ส่วน -->
+        <h3>Created By</h3>
+        <ul class="w3-ul w3-hoverable"> <!-- มี hover -->
+          <a href="https://www.facebook.com/fiaroro.tot">
+          <li class="w3-padding-16"> <!-- สร้าง list -->
+            <img src="https://scontent.fhdy3-1.fna.fbcdn.net/v/t1.0-9/39072674_1869957039752658_5851776345322815488_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_eui2=AeGA1jZjjNMaK7dYYVs37Mij-OB7lCvi6qf44HuUK-Lqp_PQY9eB6Sg4yTVeZX415vAQpaim98VW_hMXmj0C-WFg&_nc_ohc=qKU8itrSPWoAX-gvbks&_nc_ht=scontent.fhdy3-1.fna&oh=64cb745955750a80453ebef52ae2b0db&oe=5EC672AD" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Fia</span><br> <!-- span ชื่อ -->
+            <span>BIS Student</span>
+          </li>
+          </a>
+          <a href="https://www.facebook.com/mok.srisarakam">
+          <li class="w3-padding-16"> <!-- สร้าง list -->
+            <img src="https://scontent.fhdy3-1.fna.fbcdn.net/v/t1.0-9/p960x960/82281980_2701796469866086_818679715043737600_o.jpg?_nc_cat=102&_nc_sid=7aed08&_nc_eui2=AeE7wj00s04K-wrJpMulyHmCwE5hetwIJWHATmF63AglYdXoqRfkE4hEdNeEaZ-xZYIEBkjp6UY9WKFwZpuWizdF&_nc_ohc=pEMZ7BQpY3sAX-ih7XM&_nc_ht=scontent.fhdy3-1.fna&_nc_tp=6&oh=0f910f230d4e35745e46288b3c756d9e&oe=5EC5E7F9" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Mok</span><br> <!-- span ชื่อ -->
+            <span>BIS Student</span>
+          </li>
+          </a> 
+        </ul>
+      </div>
+  
+      <div class="w3-third"> <!-- ทำให้มี 3 ส่วน -->
+        <h3>All Rights Reserved.</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+      </div>
+  
+    </div>
+    </footer>
+    
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+  
+  <!-- End page content -->
+  </div>
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+  
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+    </script>
+
+
+    
+    </body>
+    </html>
