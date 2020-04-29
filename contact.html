@@ -32,43 +32,42 @@ input[type=text]:focus {
 }
 
 </style>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<body class="w3-light-grey w3-content" style="max-width:1600px"> <!-- กำหนด body สี ขนาด -->
 
   <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-collapse w3-red w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <nav class="w3-sidebar w3-collapse w3-red w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br> <!-- กำหนดรูปแบบการสร้าง Sidebar/menu กำหนดสี ทิศทางการแสดง  -->
     <div class="w3-container">
-      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-        <i class="fa fa-remove"></i>
+      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu"> <!-- สร้าง ปุ่มปิด Sidebar/menu -->
+        <i class="fa fa-remove"></i> <!-- รูป ปุ่มปิด Sidebar/menu -->
       </a>
-      <img src="photos\icon.jpg" style="width:45%;" class="w3-round"><br><br>
+      <img src="photos\icon.jpg" style="width:45%;" class="w3-round"><br><br> <!-- กำหนดรูปแบบรูปโลโก้ -->
     </div>
-    <div class="w3-bar-block">
-      <a href="#ชื่อ" class="w3-bar-item w3-button w3-right w3-hover-red">
-        <input type="text" name="search" placeholder="Search..">
-      <i class="fa fa-search"></i>
+    <div class="w3-bar-block"> <!-- block แถบค่าใน slide -->
+      <a href="#ชื่อ" class="w3-bar-item w3-button w3-right w3-hover-red"> <!-- input search bar -->
+        <input type="text" name="search" placeholder="Search.."> 
+      <i class="fa fa-search"></i> <!-- รูป search bar -->
       </a>
-    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a>
-    <a href="catalog1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw w3-margin-right"></i>BOOKS</a> 
-    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-black"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    <a href="cart.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-shopping-cart fa-fw w3-margin-right"></i>CART</a>
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a> <!-- ปุ่ม/รูป HOME -->
+    <a href="catalog1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-black"><i class="fa fa-book fa-fw w3-margin-right"></i>BOOKS</a> <!-- ปุ่ม/รูป BOOKS -->
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> <!-- ปุ่ม/รูป ABOUT -->
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a> <!-- ปุ่ม/รูป CONTACT -->
+    <a href="cart.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-shopping-cart fa-fw w3-margin-right"></i>CART</a> <!-- ปุ่ม/รูป CART -->
     </div>
-    <div class="w3-panel w3-large">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <div class="w3-panel w3-large"> <!-- ส่วนไอคอน ช่องทาง Media -->
+      <i class="fa fa-facebook-official w3-hover-opacity"></i> <!-- ไอคอน facebook -->
+      <i class="fa fa-instagram w3-hover-opacity"></i> <!-- ไอคอน instagram -->
+      <i class="fa fa-snapchat w3-hover-opacity"></i> <!-- ไอคอน snapchat -->
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i> <!-- ไอคอน pinterest -->
+      <i class="fa fa-twitter w3-hover-opacity"></i> <!-- ไอคอน twitter -->
+      <i class="fa fa-linkedin w3-hover-opacity"></i> <!-- ไอคอน linkedin -->
     </div>
   </nav>
   
-  <!-- Overlay effect when opening sidebar on small screens -->
+  <!-- Overlay effect เมื่อเปิด sidebar ในจอขนาดเล็ก -->
   <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
   
-  <!-- !PAGE CONTENT! -->
+  <!-- ส่วนเนื้อหา -->
   <div class="w3-main" style="margin-left:300px">
-  
  <!-- Header -->
  <header>
     <a href="#"><img src="photos\icon.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
@@ -80,40 +79,32 @@ input[type=text]:focus {
   </header>
   
 
-<!-- Content -->
-<div class="w3-content" style="max-width:1100px;">
-  <div class="w3-panel">
-    <h1 style="text-align: center;"><b>เกี่ยวกับเรา BIS'S BOOK</b></h1>
-    <!-- Font Awesome Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-  </style>
-  </head>
-  </div><!DOCTYPE html>
-  
+  <!-- Contact -->
+  <div class="w3-center w3-padding-64" id="contact">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+  </div>
 
-<div class="w3-panel w3-text-grey">
-    <h4>BIS'S BOOK shop เป็นเว็บไซต์ของนักศึกษาสองคนที่มีใจรักหนังสือและอยากดำเนินกิจธุรกิจส่วนตัว และ อยากขยายโอกาสให้คนได้รู้จักหนังสือดีๆ โดยขายหนังสือในราคา แค่พออยู่ได้ ที่มิได้แสวงหากำไรสูงสุด แต่เพื่อให้สามารถ ดำเนินธุรกิจต่อไปได้มีหลักฐานที่เป็นข้อเท็จจริงยืนยันมานานแล้ว ว่าเนื้อหาที่อ่านรู้เรื่องนั้นจะไปกวนสมาธิของคนอ่านให้เขวไปจากส่วนที้เป็น Layout เรานำ Lorem Ipsum มาใช้เพราะความที่มันมีการกระจายของตัวอักษรธรรมดาๆ แบบพอประมาณ ซึ่งเอามาใช้แทนการเขียนว่า ‘ตรงนี้เป็นเนื้อหา, ตรงนี้เป็นเนื้อหา' ได้ และยังทำให้มองดูเหมือนกับภาษาอังกฤษที่อ่านได้ปกติ ปัจจุบันมีแพ็กเกจของซอฟท์แวร์การทำสื่อสิ่งพิมพ์ และซอฟท์แวร์การสร้างเว็บเพจ (Web Page Editor) หลายตัวที่ใช้ Lorem Ipsum เป็นแบบจำลองเนื้อหาที่เป็นค่าตั้งต้น และเวลาที่เสิร์ชด้วยคำว่า 'lorem ipsum' ผลการเสิร์ชที่ได้ก็จะไม่พบบรรดาเว็บไซต์ที่ยังคงอยู่ในช่วงเริ่มสร้างด้วย โดยหลายปีที่ผ่านมาก็มีการคิดค้นเวอร์ชั่นต่างๆ ของ Lorem Ipsum ขึ้นมาใช้ บ้างก็เป็นความบังเอิญ บ้างก็เป็นความตั้งใจ (เช่น การแอบแทรกมุกตลก)</h4>
+  <form class="w3-container" action="/action_page.php" target="_blank">
+    <div class="w3-section">
+      <label>Name</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
     </div>
-    <div class="w3-row">
-      <div class="w3-half w3-container">
-        <img src="photos\fia.jpg" style="width:80%">
-      </div>
-      <div class="w3-half w3-container">
-        <img src="photos\mok.jpg" style="width:80%">
-        </div>
-        <div class="w3-panel w3-text-grey">
-          <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-            Why do we use it?
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</h4>
-          </div>
+    <div class="w3-section">
+      <label>Email</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
     </div>
-    
-  
-       
-    
+    <div class="w3-section">
+      <label>Subject</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
+    </div>
+    <div class="w3-section">
+      <label>Message</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
+    </div>
+    <button type="submit" class="w3-button w3-block w3-black">Send</button>
+  </form>
 
+</div>
 </div>
 
 <div class="w3-container w3-padding-large" style="margin-bottom:32px">
